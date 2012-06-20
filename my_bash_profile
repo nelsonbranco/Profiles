@@ -61,7 +61,9 @@ echo " "
 
 #while [ 1 ]; do clear; date +%r | figlet ; sleep 1; done
 
-export HISTFILESIZE=3000
+
+# maybe too much...
+export HISTFILESIZE=10000
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
@@ -69,3 +71,10 @@ export PATH=${PATH}:/Developer/SDKs/android-sdk-macosx/tools:/Developer/SDKs/and
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
+
+# git completion
+source ~/git-completion.bash
+alias gco='git co'
+alias gci='git ci'
+alias grb='git rb'
+
